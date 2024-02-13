@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nouveau Personnage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="character.name" label="Nom :"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" [(ngModel)]="character.age" label="Âge :"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" [(ngModel)]="character.height" label="Taille :"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-select [(ngModel)]="character.gender" label="Sexe :">
+      <ion-select-option value="homme">Homme</ion-select-option>
+      <ion-select-option value="femme">Femme</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-select [(ngModel)]="character.race" label="Race :">
+      <ion-select-option value="Elfe">Elfe</ion-select-option>
+      <ion-select-option value="Tieffelin">Tieffelin</ion-select-option>
+      <ion-select-option value="Drow">Drow</ion-select-option>
+      <ion-select-option value="Humain">Humain</ion-select-option>
+      <ion-select-option value="Githyanki">Githyanki</ion-select-option>
+      <ion-select-option value="Nain">Nain</ion-select-option>
+      <ion-select-option value="Demi-elfe">Demi-elfe</ion-select-option>
+      <ion-select-option value="Halfelin">Halfelin</ion-select-option>
+      <ion-select-option value="Gnome">Gnome</ion-select-option>
+      <ion-select-option value="Drakéïde">Drakéïde</ion-select-option>
+      <ion-select-option value="Demi-orque">Demi-orque</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-select [(ngModel)]="character.class" label="Classe :">
+      <ion-select-option value="Guerrier">Guerrier</ion-select-option>
+      <ion-select-option value="Roublard">Roublard</ion-select-option>
+      <ion-select-option value="Clerc">Clerc</ion-select-option>
+      <ion-select-option value="Druide">Druide</ion-select-option>
+      <ion-select-option value="Magicien">Magicien</ion-select-option>
+      <ion-select-option value="Paladin">Paladin</ion-select-option>
+      <ion-select-option value="Rôdeur">Rôdeur</ion-select-option>
+      <ion-select-option value="Moine">Moine</ion-select-option>
+      <ion-select-option value="Barbare">Barbare</ion-select-option>
+      <ion-select-option value="Barde">Barde</ion-select-option>
+      <ion-select-option value="Ensorceleur">Ensorceleur</ion-select-option>
+      <ion-select-option value="Occultiste">Occultiste</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text"  [(ngModel)]="character.backstory" label="Backstory :"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="character.pictureLink" label="Lien vers l'image :"></ion-input>
+  </ion-item>
+
+  <p class="text-center">
+    <ion-button (click)="add()">Envoyer</ion-button>
+  </p>
+</ion-content>
