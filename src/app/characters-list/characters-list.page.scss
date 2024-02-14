@@ -1,0 +1,13 @@
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.dexerto.fr/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.fr/wp-content/uploads/sites/2/2023/08/04/BG3_Beach.jpeg');
+    background-size: cover;
+    background-position: 46% top; 
+    z-index: -1; 
+    opacity: 0.5; 
+  }
+  

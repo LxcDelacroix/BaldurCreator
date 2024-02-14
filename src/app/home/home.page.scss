@@ -49,6 +49,15 @@
   color: #666;
 }
 
-.scroll-content {
-  background: url("https://img.phonandroid.com/2023/07/Baldurs-Gate-3-13.jpg")
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://fr.gamewallpapers.com/download.php?img=wallpaper_baldurs_gate_3_01_1920x1080.jpg');
+  background-size: cover;
+  background-position: 79% top;
+  z-index: -1;
+  opacity: 0.5;
 }
