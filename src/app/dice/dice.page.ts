@@ -8,16 +8,16 @@ import { ToastController } from '@ionic/angular';
 })
 export class DicePage {
 
-  typeDeDe: string ="";
-  resultatDe: number = 0;
+  typeDice: string ="";
+  resultatDice: number = 0;
 
   constructor(private toastController: ToastController) {}
 
   throwDice() {
-    if (this.typeDeDe) {
+    if (this.typeDice) {
       const min = 1;
       let max: number;
-      switch (this.typeDeDe) {
+      switch (this.typeDice) {
         case 'd4':
           max = 4;
           break;
@@ -40,9 +40,9 @@ export class DicePage {
           max = 6;
           break;
       }
-      this.resultatDe = Math.floor(Math.random() * (max - min + 1)) + min;
+      this.resultatDice = Math.floor(Math.random() * (max - min + 1)) + min;
 
-      this.presentToast(`Résultat du dé (${this.typeDeDe}): ${this.resultatDe}`);
+      this.presentToast(`Résultat du dé (${this.typeDice}): ${this.resultatDice}`);
     } else {
       this.presentToast("Veuillez sélectionner un type de dé avant de le lancer.");
     }

@@ -7,8 +7,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
+  <div class="background-image"></div>
   <div>
-    <ion-select [(ngModel)]="typeDeDe" interface="popover">
+    <ion-select [(ngModel)]="typeDice" interface="popover">
       <ion-select-option value="d4">d4</ion-select-option>
       <ion-select-option value="d6">d6</ion-select-option>
       <ion-select-option value="d8">d8</ion-select-option>
@@ -42,6 +43,8 @@
       <li>Un échec critique : C'est lorsque le résultat du dé est le plus bas possible, par exemple un 1 sur un d20.
         Cela indique généralement un échec catastrophique et peut avoir des conséquences graves pour le personnage du
         joueur.</li>
+      <li>Dans tout les cas un minimum est demandé avant le lancer du dé, si le résultat est inférieur à ce minimum, le
+        lancer est un échec.</li>
     </ul>
   </div>
 </ion-content>
