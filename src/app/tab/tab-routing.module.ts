@@ -21,6 +21,9 @@ const routes: Routes = [
       }, {
         path: 'photos',
         loadChildren: () => import('../photos/photos.module').then(m=>m.PhotosPageModule)
+      },{
+        path: 'dice',
+        loadChildren: () => import('../dice/dice.module').then(m=>m.DicePageModule)
       }
     ]
   }

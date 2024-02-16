@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lanceur de Dé JDR
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div>
+    <ion-select [(ngModel)]="typeDeDe" interface="popover">
+      <ion-select-option value="d4">d4</ion-select-option>
+      <ion-select-option value="d6">d6</ion-select-option>
+      <ion-select-option value="d8">d8</ion-select-option>
+      <ion-select-option value="d10">d10</ion-select-option>
+      <ion-select-option value="d12">d12</ion-select-option>
+      <ion-select-option value="d20">d20</ion-select-option>
+    </ion-select>
+    <ion-button expand="block" (click)="throwDice()">Lancer le dé</ion-button>
+  </div>
+
+  <div class="regles-de">
+    <h2>Règles des dés dans un JDR :</h2>
+    <p>Dans de nombreux jeux de rôle, différents types de dés sont utilisés pour déterminer les résultats des actions
+      des joueurs. Voici les dés les plus couramment utilisés :</p>
+    <ul>
+      <li>d4 : dé à quatre faces</li>
+      <li>d6 : dé à six faces</li>
+      <li>d8 : dé à huit faces</li>
+      <li>d10 : dé à dix faces</li>
+      <li>d12 : dé à douze faces</li>
+      <li>d20 : dé à vingt faces</li>
+    </ul>
+    <p>Le nombre de faces d'un dé indique le nombre de résultats possibles. Par exemple, un d6 peut donner n'importe
+      quel nombre entre 1 et 6, tandis qu'un d20 peut donner n'importe quel nombre entre 1 et 20.</p>
+
+    <h2>Conditions de réussite :</h2>
+    <p>Dans certains jeux de rôle, des conditions spéciales sont associées aux résultats des dés :</p>
+    <ul>
+      <li>Une réussite critique : C'est lorsque le résultat du dé est le plus haut possible, par exemple un 20 sur un
+        d20. Cela indique souvent un succès exceptionnel et peut déclencher des effets spéciaux ou des récompenses.</li>
+      <li>Un échec critique : C'est lorsque le résultat du dé est le plus bas possible, par exemple un 1 sur un d20.
+        Cela indique généralement un échec catastrophique et peut avoir des conséquences graves pour le personnage du
+        joueur.</li>
+    </ul>
+  </div>
+</ion-content>
