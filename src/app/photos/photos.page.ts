@@ -7,7 +7,8 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
   styleUrls: ['./photos.page.scss'],
 })
 export class PhotosPage implements OnInit {
-  public photos : picture[] = [];
+  public photos: Picture[] = [];
+
   constructor() { }
 
   ngOnInit() {
@@ -30,9 +31,12 @@ export class PhotosPage implements OnInit {
     this.addNewPhoto();
   }
 
+  removePhoto(index: number) {
+    this.photos.splice(index, 1);
+  }
 }
 
-export interface picture {
+export interface Picture {
   filepath: string;
   webviewPath: string | undefined;
 }

@@ -1,17 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Photos</ion-title>
+    <ion-title>Prendre des Photos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-grid>
+    <ion-row *ngIf="photos.length === 0">
+      <ion-col size="12" class="ion-text-center">
+        <p>Appuyez sur le bouton ci-dessous pour prendre des photos et les afficher ici :</p>
+      </ion-col>
+    </ion-row>
     <ion-row>
-      <ion-col size="6" *ngFor="let photo of photos; index as position">
-        <ion-img [src]="photo.webviewPath"></ion-img>
+      <ion-col size="6" size-md="4" size-lg="3" *ngFor="let photo of photos; let i = index">
+        <ion-card>
+          <ion-img [src]="photo.webviewPath"></ion-img>
+          <ion-card-content>
+            <ion-button color="danger" (click)="removePhoto(i)">Supprimer</ion-button>
+          </ion-card-content>
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
+
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button (click)="takePhoto()">
       <ion-icon name="camera"></ion-icon>
